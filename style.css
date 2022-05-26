@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --fonte1: 'Prata', serif;
+    --fonte2: 'Montserrat', sans-serif;
+
+    --cor1:#cdb4db;
+    --cor2:#ffc8dd;
+    --cor3:#ffafcc;
+    --cor4:#bde0fe;
+    --cor5:#a2d2ff;
+/*a cor1 é a cor principal*/
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor2);
+    font-family: var(--fonte2);
+    font-size: 1.1em;
+
+}
+
+main {
+    max-width: 800px; /*responsividade básica*/
+    min-width: 320px; /*responsividade básica*/
+    margin: 15px auto;
+    background-color: white;
+    padding: 15px;
+    padding-bottom: 70px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.342);
+
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--fonte1);
+    font-size: 3em;
+    color: var(--cor1);
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 500px;
+    min-width: 250px;
+    margin: 0 auto;
+    border: 1px solid var(--cor3);
+    /*border-radius: 8px;*/
+    background-color: white;    
+}
+
+.container-item input {
+    display: none;
+}
+
+.container-item label {
+    display: block;
+    background-color: var(--cor3);
+    cursor: pointer;
+    padding: 5px 3px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: white;
+    /*border-radius: 8px;*/
+}
+
+.accordion-content {
+    height: 0px;
+    overflow: hidden;
+    -webkit-transition: height 0.3s ease-in-out;
+    -moz-transition: height 0.3s ease-in-out;
+    -o-transition: height 0.3s ease-in-out;
+    -ms-transition: height 0.3s ease-in-out;
+    transition: height 0.3s ease-in-out;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+[id^=accordion]:checked ~ .accordion-content {
+    height: 450px;
+}
+
+footer {
+    text-align: center;
+    color: rgb(241, 241, 241);
+    font-weight: 400;
+    background-color: var(--cor3);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
